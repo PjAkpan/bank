@@ -4,13 +4,8 @@ import { useColorScheme } from "nativewind";
 import { BellIcon } from "react-native-heroicons/outline";
 
 export default function Header() {
- // const colorScheme = useColorScheme(); // Get the device's color scheme
-  const { colorScheme, toggleColorScheme } = useColorScheme();
-  //const [isDarkMode, setIsDarkMode] = useState(colorScheme === "dark");
+    const { colorScheme, toggleColorScheme } = useColorScheme();
 
-  // const toggleColorScheme = () => {
-  //   setIsDarkMode(!isDarkMode);
-  // };
 
   return (
     <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: colorScheme ? 'black' : 'white' }}>
@@ -29,11 +24,11 @@ export default function Header() {
         <BellIcon 
           size={30}
           strokeWidth={2}
-          color={colorScheme ?  "white" : "black"}
+          color={colorScheme == "dark" ?  "white" : "black"}
         />
 
         <Switch 
-          value={colorScheme=="dark"} 
+          value={colorScheme == "dark"} 
           onValueChange={toggleColorScheme} 
           thumbColor={colorScheme ? 'green' : undefined} // Change thumb color to green when in dark mode
           trackColor={{ false: '#767577', true: '#81b0ff' }} // Track color changes according to the current color scheme
