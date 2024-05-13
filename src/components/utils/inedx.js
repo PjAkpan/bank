@@ -1,7 +1,7 @@
 export const carousalData =[
     {
         id: 1,
-        imgUrl: require("../../assets/images/visa.png"),
+        imgUrl: require("../../../assets/images/purepng.com-visa-logologobrand-logoiconslogos-251519938794uqvcz.png"),
         price: 2345,
         cardType: "VISA",
         cardNumber: "*****1234",
@@ -10,7 +10,7 @@ export const carousalData =[
     },
     {
         id: 2,
-        imgUrl: require("../../assets/images/mastercard.png"),
+        imgUrl: require("../../../assets/images/mastercard-free-download-free-png.png"),
         price: 4654,
         cardType: "MasterCard",
         cardNumber: "*****5678",
@@ -19,7 +19,7 @@ export const carousalData =[
     },
     {
         id: 3,
-        imgUrl: require("../../assets/images/stripe.png"),
+        imgUrl: require("../../../assets/images/Stripe-Logo.png"),
         price: 3300,
         cardType: "Stripe",
         cardNumber: "*****9876",
@@ -28,7 +28,7 @@ export const carousalData =[
     },
     {
         id: 4,
-        imgUrl: require("../../assets/images/discover.png"),
+        imgUrl: require("../../../assets/images/616057d976000b00045a7da3-3405883920.png"),
         price: 1700,
         cardType: "Discover",
         cardNumber: "*****5432",
@@ -36,8 +36,8 @@ export const carousalData =[
         textColor: "#ea468e",
     },
     {
-        id: 1,
-        imgUrl: require("../../assets/images/paypal.png"),
+        id: 5,
+        imgUrl: require("../../../assets/images/2-2-paypal-logo-transparent-png.png"),
         price: 5500,
         cardType: "Paypal",
         cardNumber: "*****2324",
@@ -54,7 +54,7 @@ export const transactionData = [
         type: "Subscription",
         amount: "$99.00",
         date: "12 December",
-        imageSource: require("")
+        imageSource: require("../../../assets/images/580b57fcd9996e24bc43c529-4102540763.png")
     },
     {
         id: 2,
@@ -62,7 +62,7 @@ export const transactionData = [
         type: "Subscription",
         amount: "$12.99",
         date: "15 December",
-        imageSource: require("")
+        imageSource: require("../../../assets/images/amazon-logo-s3f.png")
     },
     {
         id: 3,
@@ -70,7 +70,7 @@ export const transactionData = [
         type: "Subscription",
         amount: "$9.99",
         date: "18 December",
-        imageSource: require("")
+        imageSource: require("../../../assets/images/6294f82f4609037792ef3714-2560064432.png")
     },
     {
         id: 4,
@@ -78,15 +78,15 @@ export const transactionData = [
         type: "Subscription",
         amount: "$11.99",
         date: "20 December",
-        imageSource: require("")
+        imageSource: require("../../../assets/images/youtube-logo-hd-8.png")
     },
     {
         id: 5,
-        name: "PrimeVideos",
+        name: "Prime",
         type: "Subscription",
         amount: "$25.99",
         date: "25 December",
-        imageSource: require("")
+        imageSource: require("../../../assets/images/prime-video-logo-0-2048x2048.png")
     },
 ];
 

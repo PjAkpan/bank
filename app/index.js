@@ -9,24 +9,15 @@ import { useColorScheme } from "nativewind";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 
-const { width, height } = Dimensions.get("window");
-
-// Define your styles using StyleSheet.create
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: "light",
-//   },
-//   darkBackground: {
-//     backgroundColor: "dark",
-//   },
-// });
+ const { width, height } = Dimensions.get("window");
 
 export default function App() {
   const { colorScheme, toggleColorScheme } = useColorScheme();
 
   const [fontsLoaded, fontError] = useFonts({
-    SpaceGrotesk: require("../src/components/font/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf"),
+    SpaceGroteskBold: require("../src/components/font/Space_Grotesk/static/SpaceGrotesk-Bold.ttf"),
+    SpaceGroteskSemiBold: require("../src/components/font/Space_Grotesk/static/SpaceGrotesk-SemiBold.ttf"),
+    SpaceGroteskMedium: require("../src/components/font/Space_Grotesk/static/SpaceGrotesk-Medium.ttf"),
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -39,18 +30,31 @@ export default function App() {
     return null;
   }
 
-  console.log("pppppp", colorScheme);
 
-  return (
-    <SafeAreaView className="p-6 dark:bg-neutral-900">
-      <StatusBar style={colorScheme == "dark" ? "light" : "dark"} />
-      <View onLayout={onLayoutRootView}>
-        <View className="my-6">
+   return (
+     <SafeAreaView  style={[styles.container, colorScheme === "dark" && styles.darkBackground]}>
+       <StatusBar style={colorScheme == "dark" ? "light" : "dark"} />
+      <View onLayout={onLayoutRootView} style={{ flex: 1 }}>
+         <View style={styles.content}>
           <Header />
           <Card />
-          <Transactions />
-        </View>
-      </View>
-    </SafeAreaView>
-  );
-}
+           <Transactions />
+         </View>
+       </View>
+   </SafeAreaView>
+   );
+ }
+ 
+ const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "white", // Define default background color
+  },
+  darkBackground: {
+    backgroundColor: "black", // Define dark mode background color
+  },
+  content: {
+    flex: 1,
+    padding: 8,
+  },
+});
