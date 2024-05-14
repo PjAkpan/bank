@@ -96,3 +96,4 @@ carousalData.forEach((item) => {
         currency: "USD",
     });
 });
+
